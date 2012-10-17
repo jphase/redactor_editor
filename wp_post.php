@@ -2,7 +2,7 @@
 	error_reporting(E_ALL);
 	ini_set('display_errors', 1);
 
-	$wphead = str_replace('wp-content/plugins/redactor_editor/redactor/wp-post.php', '', __FILE__) . 'wp-blog-header.php';
+	$wphead = str_replace('wp-content/plugins/redactor_editor/wp_post.php', '', __FILE__) . 'wp-blog-header.php';
 	include($wphead);
 		
 	// Extract variables from post

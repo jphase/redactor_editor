@@ -7,11 +7,13 @@
 jQuery(document).ready(function($){
 
 	// Grab some WP variables all ninja like
+/*
 	$.getScript('wp_vars.php').done(function(text, status){
 		console.log(text);
 	}).fail(function(){
 		console.log('Uh oh... redactor editor failed to load!');
 	});
+*/
 
 	// Bind redactor to "Edit" link
 	$(action_selector).click(function(e){
@@ -19,7 +21,6 @@ jQuery(document).ready(function($){
 		
 		// Save or setup redactor for editing
 		if($(action_selector).hasClass('save')){
-
 			// Save routine
 			$.post(redactorURL + '/wp_post.php', {
 				id: postID,

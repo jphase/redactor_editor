@@ -54,7 +54,7 @@ function redactor_scripts(){
 
 	// Ghetto echo to set WordPress variables we need in js - this should be changed eventually
 	echo "<script type='text/javascript'>
-		var redactorURL = '". plugins_url('redactor', __FILE__) ."';
+		var redactorURL = '". plugins_url('', __FILE__) ."';
 		var adminURL = '". admin_url() ."';
 		var postID = '{$postID}';
 		var action_selector = '{$action_selector}';
