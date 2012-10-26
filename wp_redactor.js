@@ -1,6 +1,6 @@
 /*
  *	This is the main JS file for all things redactor. The WordPress variables are grabbed from
- *	wp_jsvars.php so I can get some WP variables available to this JS file to avoid ghetto echos.
+ *	wp_vars.php so I can get some WP variables available to this JS file to avoid ghetto echos.
  *	There's probably a better way to do this, but this was quick :\
  */
 

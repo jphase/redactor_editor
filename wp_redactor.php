@@ -1,9 +1,9 @@
 <?php
 /*
  *	Plugin Name: Redactor Editor
- *  Plugin URI: http://someisteee.com
+ *	Plugin URI: http://someisteee.com
  *	Version: 1.0 beta
- *  Author: Jeff Hays
+ *	Author: Jeff Hays
  *	Author URI: http://offthewallmedia.com
  */
 

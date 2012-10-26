@@ -34,22 +34,13 @@ add_action('admin_menu', 'redactor_settings_register');
 // Display function
 function redactor_settings_main(){ ?>
 	<div class="wrap">
+	<div style="position:absolute;right:10px;top:10px;border:1px dashed #aaa;padding:10px;">
+		<h3>Email the Developer</h3>
+		<a href="mailto:jeff@offthewallmedia.com?subject=Redactor Editor">jeff@offthewallmedia.com</a>
+	</div>
 	<form method="post" action="options.php">
 	    <?php settings_fields('redactor_settings_main'); ?>
 	    <?php do_settings_sections('redactor_settings_main'); ?>
-	    <h2>Redactor Editor</h2>
-	    <table class="form-table">
-	        <tr valign="top">
-		        <th scope="row">jQuery selector to attach redactor click event to:</th>
-		        <td><input type="text" name="redactor_action_selector" placeholder=".post-edit-link" value="<?php echo get_option('redactor_action_selector', '.post-edit-link'); ?>" /></td>
-	        </tr>
-	
-	        <tr valign="top">
-		        <th scope="row">jQuery selector for the editable content area:</th>
-		        <td><input type="text" name="redactor_content_selector" placeholder=".entry-content" value="<?php echo get_option('redactor_content_selector', '.entry-content'); ?>" /></td>
-	        </tr>
-	    </table>
-	
 	    <h2>Editor Preferences</h2>
 	    <table class="form-table">
 	        <tr valign="top">
@@ -68,6 +59,7 @@ function redactor_settings_main(){ ?>
 	        </tr>
 	    </table>
 	    
+<!--
 	    <h2>Language Preferences</h2>
 	    <table class="form-table">
 	        <tr valign="top">
@@ -80,7 +72,21 @@ function redactor_settings_main(){ ?>
 		        <td><input type="text" name="redactor_direction_mode" placeholder="ltr" value="<?php echo get_option('redactor_direction_mode', 'ltr'); ?>" /></td>
 	        </tr>
 	    </table>
+-->
 
+	    <h2>Advanced Settings</h2>
+	    <table class="form-table">
+	        <tr valign="top">
+		        <th scope="row">jQuery selector to attach redactor click event to:</th>
+		        <td><input type="text" name="redactor_action_selector" placeholder=".post-edit-link" value="<?php echo get_option('redactor_action_selector', '.post-edit-link'); ?>" /></td>
+		        <td><em>For those of you that aren't developers, changing this to ".post-edit-link, #wp-admin-bar-edit a" would override the edit link in the top admin bar as well as the edit link on the page.</em></td>
+	        </tr>
+	
+	        <tr valign="top">
+		        <th scope="row">jQuery selector for the editable content area:</th>
+		        <td><input type="text" name="redactor_content_selector" placeholder=".entry-content" value="<?php echo get_option('redactor_content_selector', '.entry-content'); ?>" /></td>
+	        </tr>
+	    </table>
 <!--
 	    <h2>Buttons</h2>
 	    <table class="form-table">
